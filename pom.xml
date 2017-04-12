@@ -40,7 +40,7 @@
                   <configuration>
 
                      <!--Required. Specifies the path to the project to execute.-->
-                     <projectFile>C:\Work\SoapUI\Projects\Automation Regression Suites\Conductor-Functional-Test-soapui-project.xml</projectFile>
+                     <projectFile>Conductor-Functional-Test-soapui-project.xml</projectFile>
                      <!--Required for reports. Specifies the format of the report to generate.-->
                      <!--Possible values: PDF, XLS, HTML, RTF, CSV, TXT and XML. Only available in Ready! API Pro. -->                      <reportFormat>PDF</reportFormat>
                      <!--Required for Maven Surefire reports. Must be true. -->
@@ -96,14 +96,19 @@
                      <!--Enables HTML coverage reports. Only available in Ready! API Pro.-->
                      <!--coverage></coverage-->
                      <!--Specifies the environment to use in the test run. Only available in Ready! API Pro.-->
-                     <!--environment></environment-->
+                     <environment>T1</environment>
                      <!--Provides access to Ready! API properties.-->
                      <!--readyApiProperties></readyApiProperties-->
                      <!--If true, Ready! API will not send usage statistics.-->
                      <!--optOutUsageStatistics></optOutUsageStatistics-->
 
                      <!-- ========= /Additional elements ============= -->
-
+					<readyApiProperties>
+						<property>
+							<name>soapui.home</name> 
+							<value>C:\Program Files\SmartBear\ReadyAPI-1.9.0\bin</value>
+						</property>
+					</readyApiProperties>
                   </configuration>
                </execution>
             </executions>
@@ -118,6 +123,17 @@
                <locales>en,fr</locales>
             </configuration>
          </plugin>
+	 <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.6.1</version>
+        <configuration>
+          <verbose>true</verbose>
+          <fork>true</fork>
+          <executable>C:\Program Files\SmartBear\ReadyAPI-1.9.0\jre</executable>
+          <compilerVersion>1.3</compilerVersion>
+        </configuration>
+      </plugin>
 
       </plugins>
 
