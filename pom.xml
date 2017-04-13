@@ -103,12 +103,16 @@
                      <!--optOutUsageStatistics></optOutUsageStatistics-->
 
                      <!-- ========= /Additional elements ============= -->
-					<readyApiProperties>
-						<property>
-							<name>soapui.home</name> 
-							<value>C:\Program Files\SmartBear\ReadyAPI-1.9.0\bin</value>
-						</property>
-					</readyApiProperties>
+		     <readyApiProperties>
+			<property>
+				<name>soapui.home</name> 
+				<value>C:\Program Files\SmartBear\ReadyAPI-1.9.0\bin</value>
+			</property>
+			<property>
+                        	<name>soapui.ext.libraries</name>
+                        	<value>C:\Program Files\SmartBear\ReadyAPI-1.9.0\lib</value>
+                    	</property>
+		    </readyApiProperties>
                   </configuration>
                </execution>
             </executions>
