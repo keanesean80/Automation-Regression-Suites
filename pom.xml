@@ -19,7 +19,29 @@
    </pluginRepositories>
 
    <build>
-      <plugins>
+      <plugins>  
+         <!--Add Maven Site Plugin to improve test stability and prepare test data for Maven SureFire.-->
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-site-plugin</artifactId>
+            <version>3.5</version>
+            <configuration>
+               <locales>en,fr</locales>
+            </configuration>
+         </plugin>
+    <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <configuration>
+        <source>1.8</source>
+        <target>1.8</target>
+        <version>1.8</version>      
+        <fork>true</fork>
+          <executable>C:\Program Files\SmartBear\ReadyAPI-1.9.0\jre</executable>
+          <!--compilerVersion>3.6.1</compilerVersion-->
+        </configuration>
+      </plugin>
+
          <plugin>
             <!--Plugin groupID used to uniquely identify the project with the plugin.-->
             <groupId>com.smartbear</groupId>
@@ -28,13 +50,6 @@
             <!--Specifies your Ready! API version. Maven will use the appropriate plugin version.-->
             <!-- IMPORTANT: Must be the same as your Ready! API version.-->
             <version>1.9.0</version>
-	<dependencies>
-		<dependency>
-      			<groupId>com.oracle</groupId>
-      			<artifactId>ojdbc14</artifactId>
-      			<version>10.2.0.3.0</version>
-    		</dependency>
-	</dependencies>
             <executions>
                <execution>
 
@@ -118,35 +133,14 @@
 				<value>C:\Program Files\SmartBear\ReadyAPI-1.9.0\bin</value>
 			</property>
 			<property>
-                        	<name>soapui.ext.libraries</name>
-                        	<value>C:\Program Files\SmartBear\ReadyAPI-1.9.0\lib</value>
-                    	</property>
+                 <name>soapui.ext.libraries</name>
+                 <value>C:\Program Files\SmartBear\ReadyAPI-1.9.0\bin\ext</value>
+             </property>
 		    </readyApiProperties>
                   </configuration>
                </execution>
             </executions>
          </plugin>
-
-         <!--Add Maven Site Plugin to improve test stability and prepare test data for Maven SureFire.-->
-         <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-site-plugin</artifactId>
-            <version>3.5</version>
-            <configuration>
-               <locales>en,fr</locales>
-            </configuration>
-         </plugin>
-	 <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.6.1</version>
-        <configuration>
-          <verbose>true</verbose>
-          <fork>true</fork>
-          <executable>C:\Program Files\SmartBear\ReadyAPI-1.9.0\jre</executable>
-          <compilerVersion>1.3</compilerVersion>
-        </configuration>
-      </plugin>
 
       </plugins>
 
