@@ -12,12 +12,15 @@
          <id>SmartBearPluginRepository</id>
          <url>http://smartbearsoftware.com/repository/maven2</url>
       </pluginRepository>
+      <pluginRepository>
+         <id>MavenPluginRepository</id>
+         <url>http://repo2.maven.org/maven2</url>
+      </pluginRepository>
    </pluginRepositories>
 
    <build>
       <plugins>
          <plugin>
-
             <!--Plugin groupID used to uniquely identify the project with the plugin.-->
             <groupId>com.smartbear</groupId>
             <!--Plugin artifactId used to find the plugin in the project.-->
@@ -25,14 +28,11 @@
             <!--Specifies your Ready! API version. Maven will use the appropriate plugin version.-->
             <!-- IMPORTANT: Must be the same as your Ready! API version.-->
             <version>1.9.0</version>
-		<dependencies>
-			<dependency>
- 				<groupId>com.oracle</groupId>
- 				<artifactId>ojdbc14</artifactId>
- 				<version>10.2.0.3.0</version>
-			</dependency>
-                </dependencies>   
-
+	<dependency>
+      		<groupId>com.oracle.jdbc</groupId>
+      		<artifactId>ojdbc14</artifactId>
+      		<version>10.2.0.4.0</version>
+    	</dependency>
             <executions>
                <execution>
 
