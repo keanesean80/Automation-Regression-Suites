@@ -95,7 +95,7 @@
                      <!--If true, commands Maven to create a printed report.-->
                      <!--printReport></printReport-->
                      <!--Sets the output folder for reports.-->
-                     <!--outputFolder></outputFolder-->
+                     <outputFolder>C:\Work\SoapUI\Projects\Automation Regression Suites\Reports</outputFolder>
                      <!--If true, commands Maven to export all requests.-->
                      <!--exportAll></exportAll-->
                      <!--Specifies the SoapUI settings file to use.-->
