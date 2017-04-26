@@ -93,11 +93,11 @@
                      <!--Overrides domain used for requests.-->
                      <!--domain></domain-->
                      <!--If true, commands Maven to create a printed report.-->
-                     <!--printReport></printReport-->
+                     <printReport>true</printReport>
                      <!--Sets the output folder for reports.-->
-                     <outputFolder>C:\Work\SoapUI\Projects\Automation Regression Suites\Reports</outputFolder>
+                     <outputFolder>${basedir}/target/surefire-reports</outputFolder>
                      <!--If true, commands Maven to export all requests.-->
-                     <!--exportAll></exportAll-->
+                     <exportAll>true</exportAll>
                      <!--Specifies the SoapUI settings file to use.-->
                      <!--settingsFile></settingsFile-->
                      <!--Specifies the type of WSS password.-->
@@ -113,7 +113,7 @@
                      <!--Saves the project after the test run.-->
                      <!--saveAfterRun></saveAfterRun-->
                      <!--If true, commands Maven to continue the test run even when an assertion triggers.-->
-                     <!--testFailIgnore>true</testFailIgnore-->
+                     <testFailIgnore>true</testFailIgnore>
                      <!--Specifies the report type. Only available in Ready! API Pro.-->
                      <!--Click Reporting on Ready! API toolbar to find the list of available repors.-->
                      <!--reportName></reportName-->
